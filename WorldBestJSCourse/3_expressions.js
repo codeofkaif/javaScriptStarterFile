@@ -162,8 +162,10 @@
 //? Combining logical operators allows you to create complex conditions:
 //! Q: Write a program that determines if a person is eligible to drive based on their age being greater than or equal to 18 and having a valid driver's license❓
 
-// var age = 18;
-// var hadDrivingLicense = true;
+
+// var age = 18
+// var hadDrivingLicense = true
+// console.log(age>=18 && hadDrivingLicense)
 
 //! How would the result change if hasDriverLicense was set to false❓
 
@@ -172,9 +174,15 @@
 //* ====================================
 
 //? syntax: condition ? expressionIfTrue : expressionIfFalse;
+// var age=17
+// var result=age>=18? "Eligible to Drive":"Not Eligible to Drive"
+// console.log(result)
 // ! write a program to check if the candidates isEligibleToDrive or not? Age must be equal to or greater then 18.
 
 //! Q: Let's say you have a variable score representing a student's exam score. If the score is greater than or equal to 60, the student passes; otherwise, they fail. Use the conditional (ternary) operator to determine the result and store it in a variable called result. Log the result to the console❓
+// var score = 99;
+// var result=score>=60? "pass": "fail";
+// console.log(result)
 
 //* ===================================
 //*  Combined Interview Questions

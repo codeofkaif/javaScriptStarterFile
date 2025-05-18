@@ -100,8 +100,86 @@
 //! Question 1: Calculator Function
 //! Write a JavaScript function calculator that takes two numbers and an operator as parameters and returns the result of the operation. The function should support addition, subtraction, multiplication, and division.
 
+// function calculator(num1, num2, oprator){
+    
+//     switch(oprator){
+//         case '+':
+//             return num1 + num2;
+//             break;
+//         case '-':
+//             return num1 - num2;
+//             break;
+//         case '*':
+//             return num1 * num2;
+//             break;
+//         case '/':
+//             if(num2===0){
+//                 return "Can't divide by zero";
+//             }
+//             return num1 / num2;
+//             break;
+//         default:
+//             return "Invalid Operator";
+//             }
+//     }
+//fat arrow function
+// const calculator=(num1, num2, oprator)=>{
+    
+//     switch(oprator){
+//         case '+':
+//             return num1 + num2;
+//             break;
+//         case '-':
+//             return num1 - num2;
+//             break;
+//         case '*':
+//             return num1 * num2;
+//             break;
+//         case '/':
+//             if(num2===0){
+//                 return "Can't divide by zero";
+//             }
+//             return num1 / num2;
+//             break;
+//         default:
+//             return "Invalid Operator";
+//             }
+//     }
+// console.log(calculator(10, 5, '+'));
+// console.log(calculator(10, 5, '-'));
+// console.log(calculator(10, 5, '*'));
+// console.log(calculator(10, 5, '/'));
+// console.log(calculator(10, 0, '/'));
+// console.log(calculator(10, 5, '%'));
+
+
 //! Reverse a String:
-//! Write a function to reverse a given string without using built-in reverse methods.
+//! Write a function to reverse a given string without using built-in reverse methods. 
+// function reversString(str){
+//     let reversed="";
+//     for (let i= str.length-1; i>=0; i--){
+//         reversed+=str[i];
+//     }
+//     return reversed;
+// }
+// console.log(reversString("hello"));
 
 //! Palindrome Check:
 //! Create a function to determine if a given string is a palindrome (reads the same backward as forward).
+function reversedString(str){
+    let reversed="";
+    for (let i = str.length-1; i>=0; i--){
+        reversed+=str[i];
+    }
+    return reversed;
+}
+function isPalindrome(string){
+    if(string===reversedString(string)){
+        return true;
+    }
+    else
+    return false;
+}
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello"));
+

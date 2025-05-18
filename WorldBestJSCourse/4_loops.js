@@ -39,6 +39,26 @@
 //* ===============================
 //! 1: Write a program to check if a number is even or odd.
 //! 2: Write a program to check if a number is prime.
+// var number = 11
+// var isPrime = true;
+// for (var i = 2; i < number; i++) {
+//   if (number % i === 0) {
+//     isPrime = false;
+//     break;
+//     }
+// }
+// if (isPrime) {
+//     console.log(number + " is a prime number");
+// } else {
+//     console.log(number + " is not a prime number");
+// }
+    
+    
+  
+
+
+    
+
 //todo Prime numbers are numbers that have only 2 factors: 1 and themselves.
 //? All prime numbers greater than 2 are odd.
 //? However, not all odd numbers are prime.
@@ -74,7 +94,27 @@
 //? ==========================
 
 //! Write a JavaScript switch statement that takes a variable areaOfShapes representing different shapes, and based on its value, calculates and logs the area of the corresponding shape. Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' use variables a and b as the sides; for 'Circle,' use a variable r as the radius; and for 'Square,' use variable a as the side length. If the provided shape is not recognized, log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
-
+var areaOfShapes = "circle";
+var a=5;
+var b =  10;
+var result;
+switch (areaOfShapes){
+    case "square":
+        result = a*a;
+        console.log("areaOfShape"+ " "+result);
+        break;
+    case ("circle"):
+        var r=4;
+        result=3.14*(r*r);
+        console.log("areaOfShape"+ " "+result);
+        break;
+    case "rectangle" :  
+        result=a*b;
+        console.log("areaOfShape"+ " "+result);
+        break;
+        default:
+            console.log("Sorry the shape is not available");
+}
 //* ===============================
 //* While Loop
 //* ===============================
@@ -99,8 +139,18 @@
 // Syntax: do {
 //   // Code to be executed at least once
 // } while (condition);
+// let userInput;
+// let positiveNumber;
+// do {
+//     userInput=prompt("Enter a positive number");
+//     positiveNumber=parseInt(userInput);
+//  }while (isNaN(positiveNumber) || positiveNumber <= 0) 
+//     console.log("You Entered valid positive number"+ " " + positiveNumber);
+
+
 
 //* Simple do...while loop to count from 1 to 10 🧑‍💻
+
 
 //? Common Use Cases:
 // When you want to guarantee the execution of the loop body at least once.
@@ -122,7 +172,11 @@
 // Iteration: Executed after each iteration. Typically used to update the loop control variable.
 
 //* Simple for loop to count from 1 to 10
-
+// var sum= 0;
+// for(var num=1; num<=10; num++){
+//     sum+=num;
+//     console.log(num);
+// }
 //? Key Point:
 // The initialization, condition, and iteration expressions are optional. You can omit any or all of them, but you must include the semicolons.
 //* The code for (;;) {} represents an infinite loop in JavaScript. This construct is commonly used when you want a loop to run indefinitely or until a break statement is encountered within the loop. It's equivalent to while (true) {}.

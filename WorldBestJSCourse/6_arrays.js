@@ -72,17 +72,23 @@
 
 //* syntax
 //? splice(start, deleteCount, item1, item2, /* …, */ itemN)
-// let fruits = ["apple", "orange", "banana", "mango"];
+// let fruits = ["apple", "orange", "banana", "mango"]; 
 
 //! what if you want to add the element at the end
 
 //todo Challenge time
 // 1: Add Dec at the end of an array?
+// fruits.push("Dec");
+// console.log(fruits);
+// fruits.splice(fruits.length-4 , 1, "dec");
+// console.log(fruits);
 // 2: What is the return value of splice method?
 // 3: Update march to March (update)?
 // 4: Delete June from an array?
 
-// const months = ["Jan", "march", "April", "June", "July"];
+const months = ["Jan", "march", "April", "June", "July"];
+months.splice(3, 1)
+console.log(months); 
 
 //* =========================================
 //*  Searching in an Array
@@ -123,27 +129,63 @@
 //! Ex. le'ts say user wants to delete value 6.
 // let value = 6;
 // const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const result = numbers.map((curELem) => curELem*2);
+// console.log(result);
+// const result2 = result.findIndex((curElem) => {
+//     return curElem >10
+// });
+// console.log(result2);
+// var value =4;
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const result = numbers.filter((currentElem) => {
+//     return currentElem >value
+// });
+// console.log(result);
+
+// var value = 9;
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// console.log(numbers.filter((currentElm) => {return currentElm ===  value }));
+
 
 // Practice time
 // !Example 2: Filtering Products by Price
-// const products = [
-//   { name: "Laptop", price: 1200 },
-//   { name: "Phone", price: 800 },
-//   { name: "Tablet", price: 300 },
-//   { name: "Smartwatch", price: 150 },
-// ];
+const products = [
+  { name: "Laptop", price: 1200 },
+  { name: "Phone", price: 800 },
+  { name: "Tablet", price: 300 },
+  { name: "Smartwatch", price: 150 },
+
+];
+
 // Filter products with a price less than or equal to 500
+// var value = 500;
+// const filteredProducts = products.filter((curElem) => {
+//     return curElem.price <=value
+// });
+// console.log(filteredProducts);
 
 // //! Filter unique values
 // const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const uniqueNumbers = numbers.filter((currentElem , index, arr) => {
+//     return arr.indexOf(currentElem) === index;
+// })
+// console.log(uniqueNumbers);  
+
 
 //* =========================================
 //*  How to Sort and Compare an Array
 //* =========================================
 //? How to Sort and Compare an Array
+
 //? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
 
 // const fruits = ["Banana", "Apple", "Orange", "Mango"];
+// const numbers = [1, 2, 8, 4, 5, 6, 7, 3, 9];
+// const sortNumbers = numbers.sort((a, b) => {
+//     if (a > b) return -1;
+//     if(a<b) return 1;
+// });
+// console.log(sortNumbers);
 
 //* =========================================
 //*  Very Important Array Methods
@@ -160,9 +202,14 @@
 // map() does not change the original array.
 
 // Original array of numbers
-// const numbers = [1, 2, 3, 4, 5];
+ const numbers = [1, 2, 3, 4, 5];
 
 // Using map to square each number and create a new array
+const squareNUmbers = numbers.map((numbers) => {
+    return numbers*numbers;
+});
+console.log(squareNUmbers); // Output: [1, 4, 9, 16, 25]
+
 
 //? Reduce method
 // The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.

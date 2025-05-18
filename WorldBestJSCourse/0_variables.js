@@ -9,12 +9,16 @@
 //* Variables: A variable is a container that holds a value. It has a name and can be used to store and manipulate data in a program.
 
 //! Let's test
-// var my_firstName = "John";
+var my_firstName = "John";      
+console.log(my_firstName);
 
-// var _myLastName$ = "Doe";
+var _myLastName$ = "Doe";
+console.log(_myLastName$);
 
 // var 123myAge = 25;
+// console.log(123myAge);
 
-// var $cityName = "New York";
-
+var $cityName = "New York";
+console.log($cityName);
 // var my@Email = "john@example.com";
+// console.log(my@Email);
