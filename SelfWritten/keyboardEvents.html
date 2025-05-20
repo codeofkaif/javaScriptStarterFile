@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboardEvents</title>
+    <link rel="stylesheet" href="keyEvent.css">
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="type something...." id="myInput"/>
+        <div class="output">
+        <p class="keyPressed">Key pressed</p>
+        <p class="Keycode">Key code</p>
+        <p class="charCode">Char CodeAt</p>
+        <p class="eventType">Event type</p>
+    </div>
+</div>
+    <script>
+        const handleKeyPress = (event) =>{
+            console.log(event);
+            console.log("Key Pressed:", event.key);
+            console.log("key code:" ,event.code);
+            console.log("Event type: " , event.type);
+
+            document.querySelector(
+                ".keyPressed"
+            ).textContent = `Key Pressed: ${event.key}`;
+
+            document.querySelector(
+                ".Keycode"
+            ).textContent = `Key code: ${event.code}`;
+
+            document.querySelector(
+                ".charCode"
+            ).textContent = `Char CodeAt: ${event.key.charCodeAt(0)}`;
+
+            document.querySelector(
+                ".eventType"
+            ).textContent = `Event type: ${event.type}`;
+        };
+
+
+
+        //get the iput element
+        var myInput = document.getElementById("myInput");
+        myInput.addEventListener("keydown", handleKeyPress);
+    </script>
+    
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 20.5rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);  
+}
+input:focus{
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
